@@ -93,7 +93,6 @@ window.addEventListener("DOMContentLoaded", function(){
 //set the id to the existing key that will save over the data
 			id = key;
 		}
-		slider();
 		getSelectedRadio();
 		getCheckboxValue();
 // Gather up all our form field values and store in a object
@@ -110,6 +109,8 @@ window.addEventListener("DOMContentLoaded", function(){
 //Save data into local storage. Use stringify to convert our object to string.
 	localStorage.setItem(id, JSON.stringify(item));
 	alert("Game is Saved!");
+//reloads page so you don't get multiple entries after editing.
+	window.location.reload();
 	
 	}
 	
@@ -124,28 +125,28 @@ window.addEventListener("DOMContentLoaded", function(){
 //Write data from local storage to browser
 		var makeDiv = document.createElement('div');
 		makeDiv.setAttribute("id", "items");
-		var makeList = document.createElement('ul');
-		makeDiv.appendChild(makeList);
+		var makeUl = document.createElement('ul');
+		makeDiv.appendChild(makeUl);
 		document.body.appendChild(makeDiv);
 		gi('items').style.display = "block";
 		for(var i=0, j=localStorage.length; i<j; i++){
 			var makeLi = document.createElement('li');
 			var linkLi = document.createElement('li');
-			makeList.appendChild(makeLi);
+			makeUl.appendChild(makeLi);
 			var key = localStorage.key(i);
 			var value = localStorage.getItem(key);
 //convert string for local storage value back to an object using JSON.parse()
-			var obj = JSON.parse(value);
-			var makeSubList = document.createElement('ul');
-			makeLi.appendChild(makeSubList);
+			var object = JSON.parse(value);
+			var makeSubUl = document.createElement('ul');
+			makeLi.appendChild(makeSubUl);
 //add image to local storage data
-			getImage(obj.con[1], makeSubList);
-			for(var x in obj){
+			getImage(object.con[1], makeSubUl);
+			for(var x in object){
 				var makeSubLi = document.createElement('li');
-				makeSubList.appendChild(makeSubLi);
-				var optSubText = obj[x][0]+" "+ obj[x][1];
+				makeSubUl.appendChild(makeSubLi);
+				var optSubText = object[x][0]+" "+ object[x][1];
 				makeSubLi.innerHTML = optSubText;
-				makeSubList.appendChild(linkLi);
+				makeSubUl.appendChild(linkLi);
 			}
 			makeItemLink(localStorage.key(i), linkLi); //creat the edit and delete buttons/link for each item in local storage
 		}
@@ -153,9 +154,9 @@ window.addEventListener("DOMContentLoaded", function(){
 	}
 
 //Image function for the console been displayed
-	function getImage(gameImg, makeSubList){
+	function getImage(gameImg, makeSubUl){
 		var imgLi = document.createElement('li');
-		makeSubList.appendChild(imgLi);
+		makeSubUl.appendChild(imgLi);
 		var img = document.createElement('img');
 		var setSrc = img.setAttribute("src", "img/"+ gameImg +".png");
 		imgLi.appendChild(img);
