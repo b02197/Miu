@@ -1,0 +1,24 @@
+/*
+Michael Eaton
+Miu week 1
+term 1303
+*/
+
+*{
+
+}
+a > img{
+	height: 175px;
+	width: 350px;
+	
+}
+
+#searchF{
+	width: 200px;
+	height: 25px;
+}
+
+#searchBut{
+	width: 85px;
+	height: 25px;
+}

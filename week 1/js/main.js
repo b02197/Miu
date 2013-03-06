@@ -1,6 +1,6 @@
 //Michael Eaton
-//project 4
-//1302
+//Miu week 1
+//1303
 //js for game library
 
 
