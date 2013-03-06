@@ -62,36 +62,36 @@ var gameData = {
 	},
 	
 	"game6":{
-		"gen": ["Genre:","Shooter"],
-		"gName": ["Game Name:","Halo 3"],
-		"con": ["Console:", "Xbox360"],
+		"gen": ["Genre:","Platformer"],
+		"gName": ["Game Name:","Super Mario Bros. 3ds"],
+		"con": ["Console:", "3DS"],
 		"enjoy": ["Enjoy Game:", "Yes"],
 		"beat": ["Beaten Game:", "No"],
 		"date": ["Date Beaten:", ""],
 		"rate": ["Rate Game:", "3"],
-		"notes": ["Extra Notes:", "About half way through the game."]
+		"notes": ["Extra Notes:", "In world 4."]
 	},
 	
 	"game7":{
-		"gen": ["Genre:","Shooter"],
-		"gName": ["Game Name:","Halo 3"],
-		"con": ["Console:", "Xbox360"],
+		"gen": ["Genre:","RPG"],
+		"gName": ["Game Name:","Persona 4 Golden"],
+		"con": ["Console:", "PSV"],
 		"enjoy": ["Enjoy Game:", "Yes"],
 		"beat": ["Beaten Game:", "No"],
 		"date": ["Date Beaten:", ""],
-		"rate": ["Rate Game:", "3"],
-		"notes": ["Extra Notes:", "About half way through the game."]
+		"rate": ["Rate Game:", "5"],
+		"notes": ["Extra Notes:", "On August 10th"]
 	},
 	
 	"game8":{
-		"gen": ["Genre:","Shooter"],
-		"gName": ["Game Name:","Halo 3"],
-		"con": ["Console:", "Xbox360"],
+		"gen": ["Genre:","RPG"],
+		"gName": ["Game Name:","World of Warcraft"],
+		"con": ["Console:", "PC"],
 		"enjoy": ["Enjoy Game:", "Yes"],
 		"beat": ["Beaten Game:", "No"],
 		"date": ["Date Beaten:", ""],
-		"rate": ["Rate Game:", "3"],
-		"notes": ["Extra Notes:", "About half way through the game."]
+		"rate": ["Rate Game:", "4"],
+		"notes": ["Extra Notes:", "Working on a shaman alt."]
 	},
 	
 	"game9":{

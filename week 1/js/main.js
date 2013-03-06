@@ -8,7 +8,7 @@
 window.addEventListener("DOMContentLoaded", function(){
     
 //getElementById function to get the ids
-    function $(x){
+    function gi(x){
         var theElement = document.getElementById(x);
         return theElement;
     }
@@ -16,7 +16,7 @@ window.addEventListener("DOMContentLoaded", function(){
 //Create select field element and populate with options for genre drop down
     function getDrop1(){
         var formtag = document.getElementsByTagName("form"),
-        getLi = $('genDown'),
+        getLi = gi('genDown'),
         makeSelect = document.createElement('select');
         makeSelect.setAttribute("id", "gen");
         for(var i=0, j=genreList.length; i<j; i++){
@@ -32,7 +32,7 @@ window.addEventListener("DOMContentLoaded", function(){
 //Create select field element and populate with options for the console drop down
     function getDrop2(){
         var fromtag = document.getElementsByTagName("form"),
-        getLi = $('conDown'),
+        getLi = gi('conDown'),
         makeSelect = document.createElement('select');
         makeSelect.setAttribute("id", "con");
         for(var i=0, j=consoleList.length; i<j; i++){
@@ -57,27 +57,28 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 //find the value of the checkbox
 	function getCheckboxValue(){
-		if($('beat').checked){
-			beatValue = $('beat').value;
+		if(gi('beat').checked){
+			beatValue = gi('beat').value;
 		}else{
 			beatValue = "No";
 		}
 	}
+
 //Toggle the links	
 	function togcont(n){
 		switch(n){
 			case "on":
-				$('gameLib').style.display = "none";
-				$('clear').style.display = "inline";
-				$('displayData').style.display = "none";
-				$('addContent').style.display = "inline";
+				gi('gameLib').style.display = "none";
+				gi('clear').style.display = "inline";
+				gi('displayData').style.display = "none";
+				gi('addContent').style.display = "inline";
 				break;
 			case "off":
-				$('gameLib').style.display = "block";
-				$('clear').style.display = "inline";
-				$('displayData').style.display = "inline";
-				$('addContent').style.display = "none";
-				$('items').style.display = "none";
+				gi('gameLib').style.display = "block";
+				gi('clear').style.display = "inline";
+				gi('displayData').style.display = "inline";
+				gi('addContent').style.display = "none";
+				gi('items').style.display = "none";
 				break;
 			default:
 				return false;
@@ -92,19 +93,20 @@ window.addEventListener("DOMContentLoaded", function(){
 //set the id to the existing key that will save over the data
 			id = key;
 		}
+		slider();
 		getSelectedRadio();
 		getCheckboxValue();
 // Gather up all our form field values and store in a object
 //Object properties contain array with the form label and input value
 	var item = {};
-	item.gen = ["Genre:", $('gen').value];
-	item.gName = ["Game Name:", $('gName').value];
-	item.con = ["Console:", $('con').value];
+	item.gen = ["Genre:", gi('gen').value];
+	item.gName = ["Game Name:", gi('gName').value];
+	item.con = ["Console:", gi('con').value];
 	item.enjoy =["Enjoy Game:", enjoyValue];
 	item.beat = ["Beaten Game:", beatValue];
-	item.date = ["Date Beaten:", $('date').value];
-	item.rate = ["Rate Game:", $('rate').value];
-	item.notes = ["Extra Notes:", $('notes').value];
+	item.date = ["Date Beaten:", gi('date').value];
+	item.rate = ["Rate Game:", gi('rate').value];
+	item.notes = ["Extra Notes:", gi('notes').value];
 //Save data into local storage. Use stringify to convert our object to string.
 	localStorage.setItem(id, JSON.stringify(item));
 	alert("Game is Saved!");
@@ -119,13 +121,13 @@ window.addEventListener("DOMContentLoaded", function(){
 		alert("There are no games to display. Populating local storage with default content.");
 		defaultData();
 	}
-//Write data ffom local storage to browser
+//Write data from local storage to browser
 		var makeDiv = document.createElement('div');
 		makeDiv.setAttribute("id", "items");
 		var makeList = document.createElement('ul');
 		makeDiv.appendChild(makeList);
 		document.body.appendChild(makeDiv);
-		$('items').style.display = "block";
+		gi('items').style.display = "block";
 		for(var i=0, j=localStorage.length; i<j; i++){
 			var makeLi = document.createElement('li');
 			var linkLi = document.createElement('li');
@@ -203,9 +205,9 @@ window.addEventListener("DOMContentLoaded", function(){
 		togcont("off");
 		
 //populate the form field with current localStorage value
-		$('gen').value = item.gen[1];
-		$('gName').value = item.gName[1];	
-		$('con').value = item.con[1];
+		gi('gen').value = item.gen[1];
+		gi('gName').value = item.gName[1];	
+		gi('con').value = item.con[1];
 		var radio = document.forms[0].enjoy;
 		for(var i=0; i<radio.length; i++){
 			if(radio[i].value === "Yes" && item.enjoy[1] === "Yes"){
@@ -215,17 +217,17 @@ window.addEventListener("DOMContentLoaded", function(){
 			}
 		}
 		if(item.beat[1] == "Yes"){
-			$('beat').setAttribute("checked", "checked");
+			gi('beat').setAttribute("checked", "checked");
 		}
-		$('date').value = item.date[1];
-		$('rate').value = item.rate[1];
-		$('notes').value = item.notes[1];
+		gi('date').value = item.date[1];
+		gi('rate').value = item.rate[1];
+		gi('notes').value = item.notes[1];
 		
 //remove the initial linstener from the input "save game' button
 		save.removeEventListener("click", saveData);
 //change submit button to edit button
-		$('submit').value = "Edit Game";
-		var editSubmit = $('submit');
+		gi('submit').value = "Edit Game";
+		var editSubmit = gi('submit');
 //save the key value in this function as a property of the editSubmit event
 //so we can use that value when we save the data we edited
 		editSubmit.addEventListener("click", validate);
@@ -259,9 +261,9 @@ function clearData(){
 //validate function
 	function validate(e){
 //define the element to be checked
-		var getGen = $('gen');
-		var getGname = $('gName');
-		var getCon = $('con');
+		var getGen = gi('gen');
+		var getGname = gi('gName');
+		var getCon = gi('con');
 		
 //reset error messages
 		errMsg.innerHTML = "";
@@ -309,20 +311,20 @@ function clearData(){
 		}
 }
 //Variable defaults
-	var genreList = ["--Choose a Genre--", "Action", "Adventure", "RPG", "Shooter"],
-		consoleList = ["--Choose a Console--", "PS3", "Xbox360", "Wii"],
+	var genreList = ["--Choose a Genre--", "Action", "Adventure", "RPG", "Shooter","Platformer", "Raceing", "Puzzle"],
+		consoleList = ["--Choose a Console--", "PS3", "Xbox360", "Wii", "PSV", "PC", "3DS"],
 	enjoyValue,
 	beatValue = "No",
-	errMsg = $('error');
+	errMsg = gi('error');
 	getDrop1();
 	getDrop2();
 	
 //Set link & submit click event
-	var displayData = $('displayData');
+	var displayData = gi('displayData');
 	displayData.addEventListener("click", getData);
-	var clearLink = $('clear');
+	var clearLink = gi('clear');
 	clearLink.addEventListener("click", clearData);
-	var save = $('submit');
+	var save = gi('submit');
 	save.addEventListener("click", validate); 
 	
 });
