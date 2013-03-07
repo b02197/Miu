@@ -14,33 +14,38 @@
        </head> 
         <body>
           	
-           <nav> 
-           		<a href="additem.html"><img src="img/CTA2.png"></a>
+           <nav id="ctaButton"> 
+           		<a href="additem.html"><img src="img/CTA2.png" id="ctaBut"></a>
            </nav>
            <form action="#" method="post" id="indexForm">
-           			<label for="searchF"><input type="text" id="searchF" placeholder="Search"/></label>
+           		<div id="searchfield">
+           			<label for="searchF"><input type="text" id="searchF" placeholder="Search" /></label>
            			<input type="button" value="Search" id="searchBut"/>
-           <h2>Browse by:</h2>
-           <ol id="browse">
-           		<li>
-           		<a href="#"><img src="img/browserGen.png" id="genre"></a>
-           		</li>
-           		<li>
-           			<a href="#"><img src="img/browserCon.png" id="console"></a>          
-           		</li>
-           		<li>
-           			<a href="#"><img src="img/browserEnjoy.png" id="enjoy"></a>          
-           		</li>
-           		<li>
-           			<a href="#"><img src="img/browserBeat.png" id="beat"></a>
-           		</li>
-           		<li>
-	           		<a href="#"><img src="img/browserRate.png" id="rate"></a>
-           		</li>
-           </ol>
+           		</div>
+           		<div id="BrowseLinks">
+	           	   <h2>Browse by:</h2>
+		           <ol id="browse">
+		           		<li>
+		           			<a href="#"><img src="img/browserGen.png" id="genre"></a>
+		           		</li>
+		           		<li>
+		           			<a href="#"><img src="img/browserCon.png" id="console"></a>          
+		           		</li>
+		           		<li>
+		           			<a href="#"><img src="img/browserEnjoy.png" id="enjoy"></a>          
+		           		</li>
+		           		<li>
+		           			<a href="#"><img src="img/browserBeat.png" id="beat"></a>
+		           		</li>
+		           		<li>
+			           		<a href="#"><img src="img/browserRate.png" id="rate"></a>
+		           		</li>
+		           </ol>
+	           </div>
 	       </form>
 	       <footer>
 	       <script src="js/json.js" type="text/javascript"></script>
 	       <script src="js/search.js" type="text/javascript"></script>
+	       </footer>
         </body>
     </html>
