@@ -312,7 +312,7 @@ function clearData(){
 		}
 }
 //Variable defaults
-	var genreList = ["--Choose a Genre--", "Action", "Adventure", "RPG", "Shooter","Platformer", "Raceing", "Puzzle"],
+	var genreList = ["--Choose a Genre--", "Action", "Adventure", "RPG", "Shooter","Platformer", "Racing"],
 		consoleList = ["--Choose a Console--", "PS3", "Xbox360", "Wii", "PSV", "PC", "3DS"],
 	enjoyValue,
 	beatValue = "No",
