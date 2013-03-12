@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 // write your javascript in here
-=======
 //Michael Eaton
 //Miu week 1
 //1303
@@ -365,4 +363,3 @@ function clearData(){
 	}
 }
 });
->>>>>>> refs/remotes/origin/gh-pages
