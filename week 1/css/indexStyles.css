@@ -1,0 +1,52 @@
+/*
+Michael Eaton
+Miu week 1
+term 1303
+*/
+
+*{
+	margin: 0;
+	list-style-type: none;
+	background-color: #F6EACC;
+}
+a > img{
+	height: 175px;
+	width: 350px;
+	
+}
+
+#searchF{
+	width: 200px;
+	margin: 5px;
+	background-color: #fff;
+}
+
+#searchBut{
+	width: 85px;
+	
+}
+
+h2{
+	
+	margin-top: 5px;
+    border: 1px solid black;
+    background-color: #7E6956;
+    padding:3px;
+    text-align: center;
+    width: 345px;
+    font-size: 36px;
+    
+}    
+
+#console, #enjoy, #beat, #rate{
+	margin-left: -38px;
+	margin-top: -5px;
+	height: auto;
+}
+
+#genre{
+	margin-left: -38px;
+	margin-top: 5px;
+	height: auto;
+}
+

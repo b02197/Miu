@@ -1,9 +1,8 @@
 /*
-Micahel Eaton
-Project 4
-term 1302
+Michael Eaton
+Miu week 1
+term 1303
 */
-
 
 body{
     background-color:#402831;
@@ -66,10 +65,10 @@ div{
 }
 #error{
 	color:red;
-	font-style:;
 }
 
 div ul> li ul{
 	border-bottom: 2px solid black;
 	margin-bottom:5px;
 }
+
