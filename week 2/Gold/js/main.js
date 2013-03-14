@@ -1,6 +1,6 @@
 // write your javascript in here
 //Michael Eaton
-//Miu week 1
+//Miu week 2
 //1303
 //js for game library
 
