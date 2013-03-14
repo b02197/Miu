@@ -26,17 +26,16 @@
 		<div data-role="header" data-position="fixed">
 			<h1>Game Browser</h1>
 		</div>
-		
 		<div data-role="content">
 			<p><a href="additem.html" data-ajax="false"><img src="images/CTA2.png"></a></p>
 			<h2>Browse By:</h2>
 			<div id="browseBars">
 				<ul data-role="listview" data-inset="true" data-theme="b" data-filter="true">
-					<li><a href="#coming">Genre<span class="ui-li-count">6</span></a></li>
-					<li><a href="#coming">Console<span class="ui-li-count">5</span></a></li>
-					<li><a href="#coming">Enjoyable<span class="ui-li-count">2</span></a></li>
-					<li><a href="#coming">Beaten<span class="ui-li-count">2</span></a></li>
-					<li><a href="#coming">Rate<span class="ui-li-count">5</span></a></li>
+					<li><a href="#genPage">Genre<span class="ui-li-count">6</span></a></li>
+					<li><a href="#conPage">Console<span class="ui-li-count">6</span></a></li>
+					<li><a href="#enjPage">Enjoyable<span class="ui-li-count">2</span></a></li>
+					<li><a href="#beatPage">Beaten<span class="ui-li-count">2</span></a></li>
+					<li><a href="#ratePage">Rate<span class="ui-li-count">5</span></a></li>
 				</ul>
 			</div>
 		</div>
@@ -44,13 +43,12 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#index">Home</a></li>
-					<li><a href="#">News Steam</a></li>
+					<li><a href="#newsStream">News Steam</a></li>
 					<li><a href="#">About</a></li>
 				</ul>
 			</div>
 		</div>	
 	</div>
-	
 	<div data-role="page" id="coming">
 		<div data-role="header" data-position="fixed">
 			<h1>Coming Soon</h1>
@@ -64,12 +62,152 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#index">Home</a></li>
-					<li><a href="#">News Steam</a></li>
+					<li><a href="newsStream">News Steam</a></li>
 					<li><a href="#">About</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
+	<div data-role="page" id="genPage">
+		<div data-role="header" data-position="fixed">
+			<h1>Genre Groups</h1>
+		</div>
+		<div data-role="content">
+			<div id="genBtn">
+				<ul data-role="listview" data-inset="true" data-theme="b">
+					<li><a href="#coming">Action</a></li>
+					<li><a href="#coming">Adventure</a></li>
+					<li><a href="#coming">RPG</a></li>
+					<li><a href="#coming">Shooter</a></li>
+					<li><a href="#coming">Platformer</a></li>
+					<li><a href="#coming">Racing</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#index">Home</a></li>
+					<li><a href="#newsStream">News Steam</a></li>
+					<li><a href="#">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="conPage">
+		<div data-role="header" data-position="fixed">
+		<h1>Console Groups</h1>
+		</div>
+		<div data-role="content">
+			<div id="conBtn">
+				<ul data-role="listview" data-inset="true" data-theme="b">
+					<li><a href="#coming">PS3</a></li>
+					<li><a href="#coming">Xbox360</a></li>
+					<li><a href="#coming">Wii</a></li>
+					<li><a href="#coming">PSV</a></li>
+					<li><a href="#coming">PC</a></li>
+					<li><a href="#coming">3DS</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#index">Home</a></li>
+					<li><a href="#newsStream">News Steam</a></li>
+					<li><a href="#">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="enjPage">
+		<div data-role="header" data-position="fixed">
+			<h1>Enjoyable Groups</h1>
+			</div>
+		<div data-role="content">
+			<div id="enjBtn">
+				<ul data-role="listview" data-inset="true" data-theme="b">
+					<li><a href="#coming">Yes</a></li>
+					<li><a href="#coming">No</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#index">Home</a></li>
+					<li><a href="#newsStream">News Steam</a></li>
+					<li><a href="#">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="beatPage">
+		<div data-role="header" data-position="fixed">
+			<h1>Beaten Groups</h1>
+		</div>
+		<div data-role="content">
+			<div id="beatBtn">
+				<ul data-role="listview" data-inset="true" data-theme="b">
+					<li><a href="#coming">Yes</a></li>
+					<li><a href="#coming">No</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#index">Home</a></li>
+					<li><a href="#newsStream">News Steam</a></li>
+					<li><a href="#">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="ratePage">
+		<div data-role="header" data-position="fixed">
+			<h1>Rating Groups</h1>
+		</div>
+		<div data-role="content">
+			<div id="rateBtn">
+				<ul data-role="listview" data-inset="true" data-theme="b">
+					<li><a href="#coming">1 Star</a></li>
+					<li><a href="#coming">2 Star</a></li>
+					<li><a href="#coming">3 Star</a></li>
+					<li><a href="#coming">4 Star</a></li>
+					<li><a href="#coming">5 Star</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#index">Home</a></li>
+					<li><a href="#newsStream">News Steam</a></li>
+					<li><a href="#">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="newsStream">
+		<div data-role="header" data-position="fixed">
+			<h1>News Stream</h1>
+		</div>
+		<div data-role="content">
+			
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#index">Home</a></li>
+					<li><a href="#newsStream">News Steam</a></li>
+					<li><a href="#">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>	
+	
+		
 </body>
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
