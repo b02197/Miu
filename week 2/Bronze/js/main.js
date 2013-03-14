@@ -1,4 +1,3 @@
-// write your javascript in here
 //Michael Eaton
 //Miu week 1
 //1303
