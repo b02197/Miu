@@ -293,7 +293,7 @@ function clearData(){
 		if(getCon.value === "--Choose a Console--"){;
 			var conErr = "Please choose a Console.";
 			getCon.style.border = "1px solid red";
-			mesAry.push(conErr)
+			mesAry.push(conErr);
 	}
 	
 //if there is an error display on the screen
