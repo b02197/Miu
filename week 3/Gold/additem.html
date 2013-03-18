@@ -26,7 +26,6 @@
 <body>
 	<div data-role="page" id="dataField">
 		<div data-role="header" data-position="fixed">
-		
 		</div>
 		<div data-role="content">
 			<form>
@@ -65,11 +64,53 @@
 					</select>
 				</div>
 			</form>
+			<form>
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup" data-role="horizonal">
+						<legend>Did you enjoy plying this game?</legend>
+						<input type="radio" name="enjoy" id="enjyes" value="yes" checked="checked">
+						<label for="enjyes">Yes</label>
+						<input type="radio" name="enjoy" id="enjno" value="no">
+						<label  for="enjno">No</label>
+					</fieldset>
+				</div>
+			</form>
+			<form>
+				<div data-role="fieldcontain">
+					<label>
+						<input type="checkbox" name="beat">Did you beat this game?
+					</label>
+				</div>
+			</form>
+			<form>
+				<div data-role="firldcontain">
+					<label  for="date"> What day did you beat the game on?</label>
+					<input type="date" data-clear-btn="true" name="date" value="">
+				</div>
+			</form>
+			<form>
+				<div data-role="fieldcontain">
+					<label for="rate">Rate the game for 1 to 5</label>
+					<input type="range" name="rate" id="rate" min="1" max="5" value="1">
+				</div>
+			</form>
+			<form>
+				<div data-role="fieldcontain">
+					<label for="extra">Extra Notes</label>
+					<textarea></textarea>
+				</div>
+			</form>
+			<form>
+			<div data-role="fieldcontain">
+				<a herf=#><input type="reset" value="Reset"></a>
+				<input type="submit" value="Submit">
+			</div>
+			</form>
 		</div>
 		<div data-role="footer" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
-					<li><a href="index.html" data-icon="home" data-ajax="false">Home</a></li>
+					<li><a href="index.html" data-icon="home" data-ajax="true">Home</a></li>
 					<li><a href="#newsStream" data-icon="bars">News Steam</a></li>
 					<li><a href="#about" data-icon="info">About</a></li>
 				</ul>
@@ -92,7 +133,7 @@
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
 					<ul>
-						<li><a href="#index" data-icon="home">Home</a></li>
+						<li><a href="index.html" data-icon="home" data-ajax="true">Home</a></li>
 						<li><a href="#newsStream" data-icon="bars">News Steam</a></li>
 						<li><a href="#about" data-icon="info">About</a></li>
 					</ul>
@@ -110,8 +151,8 @@
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
 					<ul>
-						<li><a href="#index" data-icon="home">Home</a></li>
-						<li><a href="newsStream" data-icon="bars">News Steam</a></li>
+						<li><a href="index.html" data-icon="home" data-ajax="true">Home</a></li>
+						<li><a href="#newsStream" data-icon="bars">News Steam</a></li>
 						<li><a href="#about" data-icon="info">About</a></li>
 					</ul>
 				</div>
@@ -135,7 +176,7 @@
 			<div data-role="footer" data-position="fixed">
 				<div data-role="navbar">
 					<ul>
-						<li><a href="#index" data-icon="home">Home</a></li>
+						<li><a href="index.html" data-icon="home" data-ajax="true">Home</a></li>
 						<li><a href="#newsStream" data-icon="bars">News Steam</a></li>
 						<li><a href="#about" data-icon="info">About</a></li>
 					</ul>
