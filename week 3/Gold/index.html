@@ -1,5 +1,5 @@
 <!--Michael Eaton
-Miu week 2
+Miu week 
 term 1303-->
 
 
@@ -55,25 +55,6 @@ term 1303-->
 			</div>
 		</div>	
 	</div>
-	<div data-role="page" id="coming">
-		<div data-role="header" data-position="fixed">
-			<h1>Coming Soon</h1>
-			
-		</div>
-		<div data-role="content">
-			<h2>Coming Soon</h2>
-			<p>This data will been entered as soon as possible.</p>
-		</div>
-		<div data-role="footer" data-position="fixed">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#index" data-icon="home">Home</a></li>
-					<li><a href="#newsStream" data-icon="bars">News Steam</a></li>
-					<li><a href="#about" data-icon="info">About</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
 	<div data-role="page" id="genPage">
 		<div data-role="header" data-position="fixed">
 			<h1>Genre Groups</h1>
@@ -106,12 +87,12 @@ term 1303-->
 		</div>
 		<div data-role="content">
 			<div class="ui-grid-a" id="conBtn">
-				<div class="ui-block-a"><div class="ui-bar ui-bar-b" style="height:140px"><center><img src="images/PS3.png"><p><a href="#coming">PS3 Games</a></p></center></div></div>
-				<div class="ui-block-b"><div class="ui-bar ui-bar-b" style="height:140px"><center><img src="images/Xbox360.png"><p><a href="#coming">Xbox360 Games</a></p></center></div></div>
-				<div class="ui-block-a"><div class="ui-bar ui-bar-b" style="height:140px"><center><img src="images/Wii.png"><p><a href="#coming">Wii Games</a></p></center></div></div>
-				<div class="ui-block-b"><div class="ui-bar ui-bar-b" style="height:140px"><center><img src="images/PSV.png"><p><a href="#coming">PSV Games</a></p></center></div></div>
-				<div class="ui-block-a"><div class="ui-bar ui-bar-b" style="height:140px"><center><img src="images/PC.png"><p><a href="#coming">PC Games</a></p></center></div></div>
-				<div class="ui-block-b"><div class="ui-bar ui-bar-b" style="height:140px"><center><img src="images/3DS.png"><p><a href="#coming">3DS Games</a></p></center></div></div>
+				<div class="ui-block-a"><a href="#coming"><div class="ui-bar ui-bar-b" style="height:140px"><center><img src="images/PS3.png"><br>PS3 Games</center></div></a></div>
+				<div class="ui-block-b"><a href="#coming"><div class="ui-bar ui-bar-b" style="height:140px"><center><img src="images/Xbox360.png"><br>Xbox360 Games</center></div></a></div>
+				<div class="ui-block-a"><a href="#coming"><div class="ui-bar ui-bar-b" style="height:140px"><center><img src="images/Wii.png"><br>Wii Games</center></div></a></div>
+				<div class="ui-block-b"><a href="#coming"><div class="ui-bar ui-bar-b" style="height:140px"><center><img src="images/PSV.png"><br>PSV Game</center></div></a></div>
+				<div class="ui-block-a"><a href="#coming"><div class="ui-bar ui-bar-b" style="height:140px"><center><img src="images/PC.png"><br>PC Games</center></div></a></div>
+				<div class="ui-block-b"><a href="#coming"><div class="ui-bar ui-bar-b" style="height:140px"><center><img src="images/3DS.png"><br>3DS Games</center></div></a></div>
 			</div>
 		</div>
 		<div data-role="footer" data-position="fixed">
@@ -200,15 +181,14 @@ term 1303-->
 			<form>
 				<div data-role"fieldcontain">
 					<label for="genSel">Game Genre</label>
-					<select name="genSel" id="genSel">
-						<optgroup label="--Choose a Genre--" >
-							<option value="act">Action</option>
-							<option value="adv">Adventure</option>
-							<option value="rpg">RPG</option>
-							<option value="shot">Shooter</option>
-							<option value="plat">Platformer</option>
-							<option value="race">Racing</option>
-						</optgroup>
+					<select name="genSel" id="genSel" data-native-menu="false">
+						<option data-placeholder="true">Choose a Genre</option>
+						<option value="act">Action</option>
+						<option value="adv">Adventure</option>
+						<option value="rpg">RPG</option>
+						<option value="shot">Shooter</option>
+						<option value="plat">Platformer</option>
+						<option value="race">Racing</option>
 					</select>
 				</div>
 			</form>
@@ -221,15 +201,14 @@ term 1303-->
 			<form>
 				<div data-role"fieldcontain">
 					<label for="conSel">Game Console</label>
-					<select name="conSel" id="conSel">
-						<optgroup label="--Choose a Console--">
-							<option value="ps3">PS3</option>
-							<option value="xbox">Xbox360</option>
-							<option value="wii">Wii</option>
-							<option value="psv">PSV</option>
-							<option value="pc">PC</option>
-							<option value="3ds">3DS</option>
-						</optgroup>
+					<select name="conSel" id="conSel" data-native-menu="false">
+						<option data-placeholder="true">Choose a Console</option>
+						<option value="ps3">PS3</option>
+						<option value="xbox">Xbox360</option>
+						<option value="wii">Wii</option>
+						<option value="psv">PSV</option>
+						<option value="pc">PC</option>
+						<option value="3ds">3DS</option>
 					</select>
 				</div>
 			</form>
@@ -260,7 +239,7 @@ term 1303-->
 			<form>
 				<div data-role="fieldcontain">
 					<label for="rate">Rate the game for 1 to 5</label>
-					<input type="range" name="rate" id="rate" min="1" max="5" value="1">
+					<input type="range" name="rate" id="rate" min="1" max="5" value="4">
 				</div>
 			</form>
 			<form>
@@ -270,10 +249,12 @@ term 1303-->
 				</div>
 			</form>
 			<form>
-			<div data-role="fieldcontain">
-				<input type="submit" value="Submit">
-				<a herf=#><input type="reset" value="Reset"></a>
-			</div>
+				<div data-role="fieldcontain">
+					<input type="submit" value="Submit">
+				</div>
+					<div data-role="fieldcontain">
+						<a herf=#><input type="reset" value="Reset"></a>
+					</div>
 			</form>
 		</div>
 		<div data-role="footer" data-position="fixed">
@@ -334,6 +315,26 @@ term 1303-->
 			</div>
 		</div>
 	</div>
+	<div data-role="page" id="coming">
+		<div data-role="header" data-position="fixed">
+			<h1>Coming Soon</h1>
+			
+		</div>
+		<div data-role="content">
+			<h2>Coming Soon</h2>
+			<p>This data will been entered as soon as possible.</p>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#index" data-icon="home">Home</a></li>
+					<li><a href="#newsStream" data-icon="bars">News Steam</a></li>
+					<li><a href="#about" data-icon="info">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
 		
 </body>
 	<!-- JavaScript under here -->
