@@ -33,7 +33,7 @@ term 1303-->
 			<h1>Game Browser</h1>
 		</div>
 		<div data-role="content">
-			<p><a href="addItem.html" data-ajax="false"><img src="images/CTA2.png" style="width:280px"></a></p>
+			<p><a href="#addItem"><img src="images/CTA2.png" style="width:280px"></a></p>
 			<h2>Browse By:</h2>
 			<div id="browseBars">
 				<ul data-role="listview" data-inset="true" data-theme="b" data-filter="true">
@@ -187,6 +187,99 @@ term 1303-->
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#index" data-icon="home">Home</a></li>
+					<li><a href="#newsStream" data-icon="bars">News Steam</a></li>
+					<li><a href="#about" data-icon="info">About</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+		<div data-role="page" id="addItem">
+		<div data-role="header" data-position="fixed">
+		</div>
+		<div data-role="content">
+			<form>
+				<div data-role"fieldcontain">
+					<label for="genSel">Game Genre</label>
+					<select name="genSel" id="genSel">
+						<optgroup label="--Choose a Genre--" >
+							<option value="act">Action</option>
+							<option value="adv">Adventure</option>
+							<option value="rpg">RPG</option>
+							<option value="shot">Shooter</option>
+							<option value="plat">Platformer</option>
+							<option value="race">Racing</option>
+						</optgroup>
+					</select>
+				</div>
+			</form>
+			<form>
+				<div data-role="fieldcontain">
+					<label for="title">Game Title</label>
+					<input type="text" name="title" id="title" value="">
+				</div>
+			</form>
+			<form>
+				<div data-role"fieldcontain">
+					<label for="conSel">Game Console</label>
+					<select name="conSel" id="conSel">
+						<optgroup label="--Choose a Console--">
+							<option value="ps3">PS3</option>
+							<option value="xbox">Xbox360</option>
+							<option value="wii">Wii</option>
+							<option value="psv">PSV</option>
+							<option value="pc">PC</option>
+							<option value="3ds">3DS</option>
+						</optgroup>
+					</select>
+				</div>
+			</form>
+			<form>
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup" data-role="horizonal">
+						<legend>Did you enjoy plying this game?</legend>
+						<input type="radio" name="enjoy" id="enjyes" value="yes" checked="checked">
+						<label for="enjyes">Yes</label>
+						<input type="radio" name="enjoy" id="enjno" value="no">
+						<label  for="enjno">No</label>
+					</fieldset>
+				</div>
+			</form>
+			<form>
+				<div data-role="fieldcontain">
+					<label>
+						<input type="checkbox" name="beat">Did you beat this game?
+					</label>
+				</div>
+			</form>
+			<form>
+				<div data-role="firldcontain">
+					<label  for="date"> What day did you beat the game on?</label>
+					<input type="date" data-clear-btn="true" name="date" value="" placeholder="MM-DD-YYYY">
+				</div>
+			</form>
+			<form>
+				<div data-role="fieldcontain">
+					<label for="rate">Rate the game for 1 to 5</label>
+					<input type="range" name="rate" id="rate" min="1" max="5" value="1">
+				</div>
+			</form>
+			<form>
+				<div data-role="fieldcontain">
+					<label for="extra">Extra Notes</label>
+					<textarea placeholder="Add information about where you are stuck in the game, things you like or dislike about the game and/or additional information you would like to record."></textarea>
+				</div>
+			</form>
+			<form>
+			<div data-role="fieldcontain">
+				<input type="submit" value="Submit">
+				<a herf=#><input type="reset" value="Reset"></a>
+			</div>
+			</form>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="index.html" data-icon="home" data-ajax="true">Home</a></li>
 					<li><a href="#newsStream" data-icon="bars">News Steam</a></li>
 					<li><a href="#about" data-icon="info">About</a></li>
 				</ul>
