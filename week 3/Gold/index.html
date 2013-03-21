@@ -184,8 +184,9 @@ term 1303-->
             <a href="#" id="displayData">Display Data</a>  <!-- Display data link-->
 		</div>
 		<form action="" id="itemForm">
+		<h4><span style="color:red">* Are required fields</span></h4>
 			<div data-role"fieldcontain">
-				<label for="genSel">Game Genre</label>
+				<label for="genSel"><span style="color:red">*</span>Game Genre</label>
 					<select name="genSel" id="genSel" data-native-menu="false" class="required" value="">
 						<option value="">Choose a Genre</option>
 						<option value="Action">Action</option>
@@ -197,11 +198,11 @@ term 1303-->
 					</select>
 			</div>
 			<div data-role="fieldcontain">
-				<label for="title">Game Title</label>
+				<label for="title"><span style="color:red">*</span>Game Title</label>
 				<input type="text" name="title" id="title" value="" class="required" placeholder="Enter a Game Title">
 			</div>
 			<div data-role"fieldcontain">
-				<label for="conSel">Game Console</label>
+				<label for="conSel"><span style="color:red">*</span>Game Console</label>
 					<select name="conSel" id="conSel" data-native-menu="false" class="required" value="">
 						<option value="">Choose a Console</option>
 						<option value="PS3">PS3</option>

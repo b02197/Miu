@@ -99,7 +99,6 @@ function togcont(n){
 	localStorage.setItem(id, JSON.stringify(item));
 	alert("Game is Saved!");
 //reloads page so you don't get multiple entries after editing.
-	window.location.reload();
 	
 	}
 	
@@ -219,6 +218,7 @@ function togcont(n){
 		gi('submit').value = "Edit Game";
 		var editSubmit = gi('submit');
 		editSubmit.key = this.key;
+		window.location.reload();
 	}
 	
 //delete single item
