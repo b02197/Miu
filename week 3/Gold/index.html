@@ -177,15 +177,16 @@ term 1303-->
 		<div data-role="page" id="addItem">
 		<div data-role="header" data-position="fixed">
 			<h1>Game Organizer</h1>
-			<a href="#" id="clear">Clear Stored Data</a> <!-- Clear data link -->
-                <a href="#" id="displayData">Display Data</a>  <!-- Display data link-->
-
 		</div>
 		<div data-role="content">
+		<div id="buttonLinks">
+			<a href="#" id="clear">Clear Stored Data</a> <!-- Clear data link -->
+            <a href="#" id="displayData">Display Data</a>  <!-- Display data link-->
+		</div>
 		<form action="" id="itemForm">
 			<div data-role"fieldcontain">
 				<label for="genSel">Game Genre</label>
-					<select name="genSel" id="genSel" data-native-menu="false" class="required">
+					<select name="genSel" id="genSel" data-native-menu="false" class="required" value="">
 						<option value="">Choose a Genre</option>
 						<option value="Action">Action</option>
 						<option value="Adventure">Adventure</option>
@@ -197,11 +198,11 @@ term 1303-->
 			</div>
 			<div data-role="fieldcontain">
 				<label for="title">Game Title</label>
-				<input type="text" name="title" id="title" value="" class="required">
+				<input type="text" name="title" id="title" value="" class="required" placeholder="Enter a Game Title">
 			</div>
 			<div data-role"fieldcontain">
 				<label for="conSel">Game Console</label>
-					<select name="conSel" id="conSel" data-native-menu="false" class="required">
+					<select name="conSel" id="conSel" data-native-menu="false" class="required" value="">
 						<option value="">Choose a Console</option>
 						<option value="PS3">PS3</option>
 						<option value="Xbox360">Xbox360</option>
@@ -222,12 +223,12 @@ term 1303-->
 			</div>
 			<div data-role="fieldcontain">
 				<label>
-					<input type="checkbox" name="beat" id="beat" value="Yes">Did you beat this game?
+					<input type="checkbox" name="beat" id="beat" value="Yes" checked="checked">Did you beat this game?
 				</label>
 			</div>
 			<div data-role="firldcontain">
 				<label  for="date"> What day did you beat the game on?</label>
-				<input type="date" data-clear-btn="true" name="date" id="date" value="" placeholder="MM-DD-YYYY" class="required">
+				<input type="date" data-clear-btn="true" name="date" id="date" value="" placeholder="YYYY-MMM-DDD" >
 			</div>
 			<div data-role="fieldcontain">
 				<label for="rate">Rate the game for 1 to 5</label>
@@ -235,7 +236,7 @@ term 1303-->
 			</div>
 			<div data-role="fieldcontain">
 				<label for="extra">Extra Notes</label>
-				<textarea placeholder="Add information about where you are stuck in the game, things you like or dislike about the game and/or additional information you would like to record." class="required" name="note" id="notes"></textarea>
+				<textarea placeholder="Add information about where you are stuck in the game, things you like or dislike about the game and/or additional information you would like to record." name="note" id="notes"></textarea>
 			</div>
 			<div data-role="fieldcontain">
 				<input type="submit" value="Submit Game to Library" id="submit">
@@ -248,7 +249,7 @@ term 1303-->
 		<div data-role="footer" data-position="fixed" id="footer">
 			<div data-role="navbar">
 				<ul>
-<!-- 					<li><a href="#index" data-icon="home" data-ajax="true">Home</a></li> -->
+					<li><a href="#index" data-icon="home" data-ajax="true">Home</a></li>
 					<li><a href="#newsStream" data-icon="bars">News Steam</a></li>
 					<li><a href="#about" data-icon="info">About</a></li>
 				</ul>

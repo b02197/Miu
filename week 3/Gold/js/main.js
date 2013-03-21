@@ -57,7 +57,6 @@ function togcont(n){
 				gi('addItem').style.display = "none";
 				gi('clear').style.display = "inline";
 				gi('displayData').style.display = "none";
-				
 				break;
 			case "off":
 				gi('addItem').style.display = "block";
@@ -95,6 +94,7 @@ function togcont(n){
 	item.date = ["Date Beaten:", gi('date').value];
 	item.rate = ["Rate Game:", gi('rate').value];
 	item.notes = ["Extra Notes:", gi('notes').value];
+	console.log(item)
 //Save data into local storage. Use stringify to convert our object to string.
 	localStorage.setItem(id, JSON.stringify(item));
 	alert("Game is Saved!");
@@ -112,7 +112,7 @@ function togcont(n){
 		defaultData();
 	}
 		
-//Write data from local storage to browser
+//Write data from local storage to browse
 		var makeDiv = document.createElement('div');
 		makeDiv.setAttribute("id", "items");
 		var makeUl = document.createElement('ul');
@@ -130,7 +130,7 @@ function togcont(n){
 			var makeSubUl = document.createElement('ul');
 			makeLi.appendChild(makeSubUl);
 //add image to local storage data
-			getImage(object.con[1], makeSubUl);
+			getImage(object.conSel[1], makeSubUl);
 			for(var x in object){
 				var makeSubLi = document.createElement('li');
 				makeSubUl.appendChild(makeSubLi);
@@ -139,7 +139,7 @@ function togcont(n){
 				makeSubUl.appendChild(linkLi);
 			}
 			makeItemLink(localStorage.key(i), linkLi); //creat the edit and delete buttons/link for each item in local storage
-		}
+				}
 
 	
 	}
@@ -215,15 +215,10 @@ function togcont(n){
 		gi('rate').value = item.rate[1];
 		gi('notes').value = item.notes[1];
 		
-//remove the initial linstener from the input "save game' button
-		save.removeEventListener("click", saveData);
 //change submit button to edit button
 		gi('submit').value = "Edit Game";
 		var editSubmit = gi('submit');
-//save the key value in this function as a property of the editSubmit event
-//so we can use that value when we save the data we edited
-		editSubmit.addEventListener("click", validate);
-		editSubmit.key = this.key	
+		editSubmit.key = this.key;
 	}
 	
 //delete single item
