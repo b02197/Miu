@@ -7,3 +7,6 @@ label.error{
 	display:inline;
 }
 
+#home >content{
+	background-color: green
+}

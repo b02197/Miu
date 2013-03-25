@@ -21,6 +21,7 @@ term 1303-->
 	<meta http-equiv="cleartype" content="on">
 	
 	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="css/themes/gameOrg.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
 	<link rel="stylesheet" href="css/style.css"/>
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
@@ -28,15 +29,16 @@ term 1303-->
 
 </head>
 <body>
-	<div data-role="page" id="index">
+	<div data-role="page" id="index" data-theme="a">
 		<div data-role="header" data-position="fixed" id="header">
+		<link rel="stylesheet" href="css/themes/gameOrg.min.css" />
 			<h1>Game Browser</h1>
 		</div>
-		<div data-role="content">
+		<div data-role="content" data-theme="a">
 			<p><a href="#addItem"><img src="images/CTA2.png" style="width:280px"></a></p>
 			<h2>Browse By:</h2>
-			<div id="browseBars">
-				<ul data-role="listview" data-inset="true" data-theme="b" data-filter="true">
+			<div id="browseBars" data-theme="a">
+				<ul data-role="listview" data-inset="true" data-theme="a" data-filter="true">
 					<li><a href="#genPage">Genre<span class="ui-li-count">6</span></a></li>
 					<li><a href="#conPage">Console<span class="ui-li-count">6</span></a></li>
 					<li><a href="#enjPage">Enjoyable<span class="ui-li-count">2</span></a></li>
@@ -174,7 +176,7 @@ term 1303-->
 			</div>
 		</div>
 	</div>
-		<div data-role="page" id="addItem">
+		<div data-role="page" id="addItem" data-theme="a">
 		<div data-role="header" data-position="fixed">
 			<h1>Game Organizer</h1>
 		</div>
@@ -240,7 +242,7 @@ term 1303-->
 				<textarea placeholder="Add information about where you are stuck in the game, things you like or dislike about the game and/or additional information you would like to record." name="note" id="notes"></textarea>
 			</div>
 			<div data-role="fieldcontain">
-				<input type="submit" value="Submit Game to Library" id="submit">
+				<input type="submit" value="Submit Game to Library" id="submit" data-theme="c">
 			</div>
 			<div data-role="fieldcontain">
 				<input type="reset" value="Reset" id="reset">
