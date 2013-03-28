@@ -1,0 +1,12 @@
+label.error{
+	display: block;
+	margin: 10px 0;
+	color: red;
+}
+#jsonData{
+	display:inline;
+}
+
+img{
+	margin-right: 150px
+}
